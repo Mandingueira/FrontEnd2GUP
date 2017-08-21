@@ -1,0 +1,9 @@
+<h2>Lista zadan</h2>
+
+
+    <div ng-repeat="task in tasks">
+        <h3>{{ task.title }}</h3> 
+        <p>{{ task.desc }} </p>
+        <button ng-click="delete(task.id)" type="button" class="btn btn-success">Zrobione</button>
+        <hr>
+    </div>
