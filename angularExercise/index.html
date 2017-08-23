@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+    <head>
+        <title>Połączenie HTTP - angularjs</title>
+        <meta charset="utf-8">
+        <meta charset="utf-8"/>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+        
+        
+        
+    </head>
+    <body>
+
+        
+        
+        <div ng-controller="mainController">
+            <p ng-repeat="subject in subjects">
+                <span class="myFont" ng-hide="subject.id == actualEditId" ng-dblclick="edit(subject)">
+                    {{ subject.name }}
+                </span>
+                
+                <input type="text" ng-model="subject.name" ng-show="subject.id == actualEditId" ng-keyup="tryEdit($event.keyCode, subject)">
+                
+<!--
+                <button ng-click="edit(subject)" class="right myFont">
+                    Edytuj
+-->
+                </button>
+            </p>
+        </div>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
