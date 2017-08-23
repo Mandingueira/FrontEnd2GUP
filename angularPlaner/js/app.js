@@ -71,4 +71,4 @@ app.controller('get', function($scope, task){
 app.controller('deleteTaskController', function($scope, $routeParams, task, $location) {
     task.deletedById($routeParams.id);
     $location.path('/store');
-    });
+});
