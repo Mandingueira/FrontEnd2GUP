@@ -1,0 +1,82 @@
+body {
+    background-image:url("https://wallpaperbrowse.com/media/images/background-8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.h2{
+    font-size: 80px; 
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.p{
+    font-size: 20px;
+}
+
+
+
+.d-none {
+    display: none;
+}
+
+.m-b-100 {
+    margin-bottom: 100px;
+}
+
+.pizza {
+    cursor: pointer;
+}
+
+.boosters{
+    list-style: none;
+    padding: 10px 0;
+   
+}
+
+.boosters > li {
+    border: 1px solid black;
+    padding: 10px 130px;
+    background-image: url(data-image);
+    background-size: contain;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+     background-color:cornsilk;
+}
+
+.boosters > li:hover {
+    background-color: antiquewhite;
+    
+}
+
+.boostItem {
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin-right: 20px;
+    height: 100px;
+
+}
+
+img {
+    animation: hue-rotate 5s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes hue-rotate {
+
+    0% {}
+    25% {
+    transform: rotateZ(90deg);
+    }
+    50% {
+    transform: rotateZ(180deg);
+    }
+    75% {
+    transform: rotateZ(270deg);
+    }
+    100% {
+    transform: rotateZ(360deg);
+    }
+}
+
